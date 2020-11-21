@@ -10,7 +10,8 @@ def generate()
     :path => request.path,
     :scheme => request.scheme,
     :script_name => request.script_name,
-    :query_string => request.query_string
+    :query_string => request.query_string,
+    :ruby_version => ENV['RUBY_VERSION']
   }
  JSON.generate(response)
 end
